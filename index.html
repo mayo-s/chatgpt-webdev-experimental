@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Office Presence Tracker</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Office Presence Tracker</h1>
+  
+  <div>
+    <label for="location">Select Your Work Location:</label>
+    <select id="location" onchange="updatePresence()">
+      <option value="">-- Select Location --</option>
+      <option value="Floor 1">Floor 1</option>
+      <option value="Floor 2">Floor 2</option>
+      <option value="Floor 3">Floor 3</option>
+    </select>
+  </div>
+
+  <table id="participants">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Participants will be dynamically added here -->
+    </tbody>
+  </table>
+</body>
+</html>
