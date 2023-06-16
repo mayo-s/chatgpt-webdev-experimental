@@ -1,33 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Office Presence Tracker</title>
-  <script src="script.js"></script>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Office Presence Tracker</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-  <h1>Office Presence Tracker</h1>
-  
-  <div>
-    <label for="location">Select Your Work Location:</label>
-    <select id="location" onchange="updatePresence()">
-      <option value="">-- Select Location --</option>
-      <option value="Floor 1">Floor 1</option>
-      <option value="Floor 2">Floor 2</option>
-      <option value="Floor 3">Floor 3</option>
-    </select>
-  </div>
+<div class="container">
 
-  <table id="participants">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Location</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Participants will be dynamically added here -->
-    </tbody>
-  </table>
+    <h1>Office Presence Tracker</h1>
+
+    <div>
+        <label for="location">Select Your Work Location:</label>
+        <input type="text" id="name" placeholder="Name">
+        <select id="location">
+            <option value="">Select Location</option>
+            <option value="Office">Office</option>
+            <option value="Home">Home</option>
+            <option value="Garden">Garden</option>
+            <option value="Kanu">Kanu</option>
+            <option value="Park">Park</option>
+            <option value="Copenhagen">Copenhagen</option>
+        </select>
+        <input type="date" id="date" value="">
+        <input type="time" id="time" value="">
+        <button onclick="addParticipant()">Add Participant</button>
+    </div>
+
+    <table id="participants" class="table">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Date and Time</th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- Participants will be dynamically added here -->
+        </tbody>
+    </table>
+
+    <div>
+        <button onclick="saveParticipantsToFile()">Save Participants</button>
+    </div>
+</div>
 </body>
 </html>
